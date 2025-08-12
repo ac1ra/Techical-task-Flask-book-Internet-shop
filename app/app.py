@@ -76,7 +76,7 @@ def dashboard():
 @login_required
 def logout():
     logout_user()
-    return render_template("home.html")
+    return redirect(url_for("home"))
 
 
 if __name__ == "__main__":
