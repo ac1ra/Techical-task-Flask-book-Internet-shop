@@ -5,3 +5,71 @@ h1 {
 .error {
     color: red;
 }
+
+
+
+.block-login {
+    height: 400px;
+    width: 250px;
+    border: 2px dashed black;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* <- can delete if dont work-> */
+.block-main {
+
+    border: 2px dashed black;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.block-cataloge {
+    max-width: 30%;
+    width: 100px;
+    border: 2px dashed black;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.block-part2 {
+    max-width: 70%;
+    width: 600px;
+    border: 2px dashed black;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.row-1 {
+    border: 2px dashed black;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+
+
+.row-4 {
+    border: 2px dashed black;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.block-birck {
+    width: 100%;
+    justify-content: center;
+    border: 2px dashed black;
+    padding: 1px;
+    display: flex;
+}

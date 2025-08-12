@@ -17,6 +17,11 @@ login_manager.login_view = "login"
 class Users(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(250), unique=True, nullable=False)
+    surname = db.Column(db.String(250), unique=True, nullable=False)
+
+    email = db.Column(db.String(250), unique=True, nullable=False)
+    phone = db.Column(db.String(250), unique=True, nullable=False)
+
     password = db.Column(db.String(250), nullable=False)
 
 
@@ -38,12 +43,16 @@ def home():
 def register():
     if request.method == "POST":
         username = request.form.get("username")
+        surname = request.form.get("surname")
+        email = request.form.get("email")
+        phone = request.form.get("phone")
         password = request.form.get("password")
-        if Users.query.filter_by(username=username).first():
-            return render_template("signup.html", error="Username already taken!")
+        if Users.query.filter_by(email=email).first():
+            return render_template("signup.html", error="Email already taken!")
         hashed_password = generate_password_hash(
             password, method="pbkdf2:sha256")
-        new_user = Users(username=username, password=hashed_password)
+        new_user = Users(username=username.capitalize(), surname=surname.capitalize(),
+                         email=email, phone=phone, password=hashed_password)
         db.session.add(new_user)
         db.session.commit()
         return redirect(url_for("login"))
@@ -54,9 +63,9 @@ def register():
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
-        username = request.form.get("username")
+        email = request.form.get("email")
         password = request.form.get("password")
-        user = Users.query.filter_by(username=username).first()
+        user = Users.query.filter_by(email=email).first()
 
         if user and check_password_hash(user.password, password):
             login_user(user)

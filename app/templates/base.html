@@ -21,9 +21,30 @@
         </nav>
     </header>
     <main>
-        {% block content %}
-        <!-- Место установки Контента -->
-        {% endblock %}
+        <div class="block-main">
+            <div class="block-cataloge">Каталог:</div>
+            <div class="block-part2">
+                <div class="row-1">
+                    <div class="block-birck">Поиск:</div>
+                    <div class="block-birck">Вход:</div>
+                    <div class="block-birck">Регистрация</div>
+                </div>
+                <div class="row-2">
+                    <div class="block-list">ТОП 3 продаж недели:</div>
+                </div>
+                <div class="row-3">
+                    <div class="block-list">Разделы каталога:</div>
+                </div>
+                <div class="row-4">
+                    <div class="block-birck">Контакты</div>
+                    <div class="block-birck">Способ доставки</div>
+                    <div class="block-birck">Способ оплаты</div>
+                </div>
+            </div>
+            {% block content %}
+            <!-- Место установки Контента -->
+            {% endblock %}
+        </div>
     </main>
     <footer>
         <p>&copy; 2025 Flask App Practicum</p>
