@@ -6,11 +6,9 @@ h1 {
     color: red;
 }
 
-
-
-.block-login {
+.block-custom {
     height: 400px;
-    width: 250px;
+    /* width: 250px; */
     border: 2px dashed black;
     padding: 15px;
     display: flex;
@@ -20,7 +18,7 @@ h1 {
 
 /* <- can delete if dont work-> */
 .block-main {
-
+    height: 500px;
     border: 2px dashed black;
     padding: 15px;
     display: flex;
@@ -48,7 +46,14 @@ h1 {
     gap: 5px;
 }
 
-.row-1 {
+.block-custom {
+    height: 100%;
+    border: 2px dashed black;
+    padding: 15px;
+
+}
+
+body main .block-main .block-part2 .block-custom .row-1 {
     border: 2px dashed black;
     padding: 15px;
     display: flex;
@@ -57,6 +62,15 @@ h1 {
 }
 
 
+body main .block-main .block-part2 .block-custom .row-2 {
+    height: 30%;
+    background-color: yellow;
+}
+
+body main .block-main .block-part2 .block-custom .row-3 {
+    height: 70%;
+    background-color: yellowgreen;
+}
 
 .row-4 {
     border: 2px dashed black;
@@ -72,4 +86,14 @@ h1 {
     border: 2px dashed black;
     padding: 1px;
     display: flex;
+}
+
+body main .block-main .block-part2 .block-custom .block-login {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 50%;
+    align-self: center;
+    padding-bottom: 20px;
+    height: 100%;
 }
