@@ -88,5 +88,10 @@ def logout():
     return redirect("/login")
 
 
+@app.route('/catalog')
+def catalog():
+    return redirect("/catalog")
+
+
 if __name__ == "__main__":
     app.run(debug=True)
